@@ -1,0 +1,10 @@
+.heroes {
+  text-align: left;
+  .badge {
+    margin-right: 10px;
+    color: #ff0000;
+  }
+  .selected {
+    background-color: #ffff00;
+  }
+}
