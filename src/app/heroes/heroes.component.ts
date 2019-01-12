@@ -12,7 +12,7 @@ export class HeroesComponent implements OnInit {
   heroes: Hero[];
   selectHero: Hero;
   getHeroes() {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().subscribe(heroes => (this.heroes = heroes));
   }
   onSelect(hero: Hero) {
     this.selectHero = hero;
