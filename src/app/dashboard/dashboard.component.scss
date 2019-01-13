@@ -1,0 +1,13 @@
+.heroes {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff0;
+    width: 200px;
+    height: 100px;
+  }
+}
