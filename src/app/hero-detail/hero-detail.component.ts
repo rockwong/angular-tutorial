@@ -15,7 +15,7 @@ export class HeroDetailComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private heroService: HeroService,
   ) {}
-  hero = Hero;
+  hero: Hero;
   ngOnInit() {
     this.getHero();
   }
@@ -25,5 +25,8 @@ export class HeroDetailComponent implements OnInit {
   getHero() {
     const id = +this.activatedRoute.snapshot.paramMap.get('id');
     this.heroService.getHero(id).subscribe(hero => (this.hero = hero));
+  }
+  save() {
+    this.heroService.updateHero(this.hero).subscribe(() => this.goBack());
   }
 }
