@@ -1,0 +1,6 @@
+ <span> 总共 {{list.length}} 条</span>
+ <ul class="nav nav-pills">
+   <li *ngFor="let btn of btns" class="nav-item">
+     <a class="nav-link active" [class.active]="type===btn.key" (click)="onChange(btn.key)">{{btn.value}}</a>
+   </li>
+ </ul>
