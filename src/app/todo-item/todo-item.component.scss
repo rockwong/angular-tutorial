@@ -1,0 +1,21 @@
+@import '~bootstrap/scss/mixins';
+.list-group-item {
+  position: relative;
+  .form-check {
+    padding-left: 0;
+  }
+  &:hover .actions {
+    display: block;
+  }
+  .actions {
+    display: none;
+    position: absolute;
+    right: 10px;
+    margin-top: (-2.375em/2);
+    top: 50%;
+    .btn {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+}
