@@ -10,9 +10,10 @@
     </div>
     <ul class="list-group">
       <ng-container *ngIf="list">
-        <app-todo-item *ngFor="let item of list" [title]="item.title" [completed]="item.completed" [id]="item.id"></app-todo-item>
+        <app-todo-item *ngFor="let item of finalList" (delete)="onDelete(item.id)" (toggle)="onToggle(item.id)" [title]="item.title" [completed]="item.completed" [id]="item.id"></app-todo-item>
       </ng-container>
     </ul>
+    <app-todo-footer *ngIf="list && list.length>0" [list]="list" [type]="filterType" (change)="onTypeChange($event)"></app-todo-footer>
   </div>
 </div>
 

@@ -2,9 +2,8 @@
   <div class="form-check">
     <label class="form-check-label">
       <input class="form-check-input" type="checkbox" [checked]="completed" (change)="onToggle()">
-      {{completed}}
       <span class="form-check-sign"></span>
-      {{title}}
+      <span class="title" [class.completed]="completed">{{title}}</span>
     </label>
   </div>
 
