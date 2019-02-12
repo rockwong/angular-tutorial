@@ -1,14 +1,14 @@
 <li class="list-group-item">
   <div class="form-check">
     <label class="form-check-label">
-      <input class="form-check-input" type="checkbox" checked>
+      <input class="form-check-input" type="checkbox" [checked]="completed" (input)="onToggle()">
       <span class="form-check-sign"></span>
       {{title}}
     </label>
   </div>
 
   <div class="actions">
-    <button type="button" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral">
+    <button type="button" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" (click)="onDelete()">
       <i class="now-ui-icons ui-1_simple-remove"></i>
     </button>
   </div>
