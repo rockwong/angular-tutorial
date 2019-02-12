@@ -8,12 +8,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class TodoItemComponent implements OnInit {
   constructor() {}
   @Input() title = 'Untitled';
-  @Input() completed: string;
+  @Input() completed: boolean;
   @Input() id: string;
   @Output() toggle: EventEmitter<any> = new EventEmitter();
   @Output() delete: EventEmitter<any> = new EventEmitter();
   ngOnInit() {}
   onToggle() {
+    console.log('onToggle', this.completed);
     this.toggle.emit(!this.completed);
   }
   onDelete() {
